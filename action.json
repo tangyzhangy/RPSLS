@@ -1,0 +1,18 @@
+{
+	"actions": [
+      {
+        "description": "Default Welcome Intent",
+        "name": "MAIN",
+        "fulfillment": {
+          "conversationName": "RPSLS"
+        },
+      }
+    ],
+    "conversations": {
+      "RPSLS": {
+        "name": "RPSLS",
+        "url": "https://us-central1-rpsls-68782.cloudfunctions.net/RPSLS"
+      }
+    }
+
+}

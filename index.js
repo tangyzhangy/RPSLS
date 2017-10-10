@@ -12,9 +12,9 @@ const choiceMapping = {
 	"5": "spock",
 }
 const resultMapping = {
-	"win": "Congratulations, you won! Pick another object to play again!",
-	"tie": "It was a tie! Pick another object to play again!",
-	"lose": "Aww, you lose! Pick another object to play again!",
+	"win": ". Congratulations, you won! Pick another object to play again!",
+	"tie": ". It was a tie! Pick another object to play again!",
+	"lose": ". Aww, you lose! Pick another object to play again!",
 }
 
 exports.RPSLS = (req, res) => {
@@ -22,63 +22,63 @@ exports.RPSLS = (req, res) => {
 	var compChoice = choiceMapping[generateChoice(0, 5)];
 	if(userChoice === "scissor"){
 		if(compChoice === "paper")
-			response = resultMapping["win"];
+			response = "I chose " + compChoice + resultMapping["win"];
 		else if (compChoice === "spock")
-			response = resultMapping["lose"];
+			response = "I chose " + compChoice + resultMapping["lose"];
 		else if (compChoice === "lizard")
-			response = resultMapping["win"];
+			response = "I chose " + compChoice + resultMapping["win"];
 		else if (compChoice === "rock")
-			response = resultMapping["lose"];
+			response = "I chose " + compChoice + resultMapping["lose"];
 		else 
-			response = resultMapping["tie"];
+			response = "I chose " + compChoice + resultMapping["tie"];
 	} 
 	else if(userChoice === "rock"){
 		if(compChoice === "paper")
-			response = resultMapping["lose"];
+			response = "I chose " + compChoice + resultMapping["lose"];
 		else if (compChoice === "spock")
-			response = resultMapping["lose"];
+			response = "I chose " + compChoice + resultMapping["lose"];
 		else if (compChoice === "lizard")
-			response = resultMapping["win"];
+			response = "I chose " + compChoice + resultMapping["win"];
 		else if (compChoice === "scissor")
-			response = resultMapping["win"];
+			response = "I chose " + compChoice + resultMapping["win"];
 		else 
-			response = resultMapping["tie"];
+			response = "I chose " + compChoice + resultMapping["tie"];
 	}
 	else if(userChoice === "paper"){
 		if(compChoice === "scissor")
-			response = resultMapping["lose"];
+			response = "I chose " + compChoice + resultMapping["lose"];
 		else if (compChoice === "spock")
-			response = resultMapping["win"];
+			response = "I chose " + compChoice + resultMapping["win"];
 		else if (compChoice === "lizard")
-			response = resultMapping["lose"];
+			response = "I chose " + compChoice + resultMapping["lose"];
 		else if (compChoice === "rock")
-			response = resultMapping["win"];
+			response = "I chose " + compChoice + resultMapping["win"];
 		else 
-			response = resultMapping["tie"];
+			response = "I chose " + compChoice + resultMapping["tie"];
 	} 
 	else if(userChoice === "lizard"){
 		if(compChoice === "rock")
-			response = resultMapping["lose"];
+			response = "I chose " + compChoice + resultMapping["lose"];
 		else if (compChoice === "spock")
-			response = resultMapping["win"];
+			response = "I chose " + compChoice + resultMapping["win"];
 		else if (compChoice === "paper")
-			response = resultMapping["win"];
+			response = "I chose " + compChoice + resultMapping["win"];
 		else if (compChoice === "scissor")
-			response = resultMapping["lose"];
+			response = "I chose " + compChoice + resultMapping["lose"];
 		else 
-			response = resultMapping["tie"];
+			response = "I chose " + compChoice + resultMapping["tie"];
 	} 
 	else {
 		if(compChoice === "paper")
-			response = resultMapping["lose"];
+			response = "I chose " + compChoice + resultMapping["lose"];
 		else if (compChoice === "lizard")
-			response = resultMapping["lose"];
+			response = "I chose " + compChoice + resultMapping["lose"];
 		else if (compChoice === "rock")
-			response = resultMapping["win"];
+			response = "I chose " + compChoice + resultMapping["win"];
 		else if (compChoice === "scissor")
-			response = resultMapping["win"];
+			response = "I chose " + compChoice + resultMapping["win"];
 		else 
-			response = resultMapping["tie"];
+			response = "I chose " + compChoice + resultMapping["tie"];
 	}
 
 res.setHeader('Content-Type', 'application/json'); 
