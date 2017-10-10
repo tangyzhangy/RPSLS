@@ -1,0 +1,19 @@
+{
+  "name": "rpsls",
+  "version": "1.0.0",
+  "description": "Rock Paper Scissor Lizard Spock game for Google Home",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yanfii/RPSLS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yanfii/RPSLS/issues"
+  },
+  "homepage": "https://github.com/Yanfii/RPSLS#readme"
+}
